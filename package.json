@@ -1,0 +1,23 @@
+{
+  "name": "web-weather-app",
+  "version": "1.0.0",
+  "description": "give weather information",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "Biswajeet",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "oauth": "^0.9.15",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {}
+}
