@@ -49,8 +49,7 @@
                    <div class="col-md-4">
                        <div class="row">
                            <div class="col-md-12">
-                                <div class="input-group mb-3">
-                                    
+                                <div class="input-group mb-3">  
                                         <input type="text" class="form-control" name='city' placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-dark" type="submit" id="button-addon2">Weather</button>                    
@@ -75,12 +74,16 @@
                                       </tr>
                                     </thead>
                                     <tbody>
+                                      {{#each weatherResult}}
                                       <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <th scope="row">{{this.day}}</th>
+                                        <td>{{this.low}}</td>
+                                        <td>{{this.high}}</td>
+                                        <td>{{this.text}}</td>
                                       </tr>
+                                      {{else}}
+                                          <p>list Empty</p>
+                                      {{/each}}
                                     </tbody>
                                   </table>
                     </div>

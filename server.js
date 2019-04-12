@@ -18,6 +18,8 @@ app.listen(port, () => {
     console.log(`Hosted at ${port}`)
 })
 
+let weatherResult;
+
 var OAuth = require('oauth');
 var header = {
     "X-Yahoo-App-Id": "JRME0E52"
@@ -51,12 +53,9 @@ app.post('/result', urlencodedParser,(req, res) => {
                     if (err) {
                         console.log(err);
                     } else {
-                        console.log(result)
-                        //console.log(JSON.parse(data, undefined, 2));
-                        res.send();
+                        weatherResult = JSON.parse(data, undefined, 2).forecasts;
+                        res.render('weather.hbs', {weatherResult});
                     }
                 }
-            
-            );
-    
+            );    
 });
