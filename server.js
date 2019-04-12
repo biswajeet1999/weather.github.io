@@ -12,7 +12,8 @@ app.use(express.static(__dirname+'/public/images'));
 app.use(express.static(__dirname+'/public/css'));
 app.use(express.static(__dirname+'/public/js'))
 
-const port = process.env.port || 1234;
+const port = process.env.PORT || 1234;
+
 
 app.listen(port, () => {
     console.log(`Hosted at ${port}`)
